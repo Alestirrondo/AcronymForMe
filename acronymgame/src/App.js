@@ -8,7 +8,7 @@ import useAuth from './hooks/useAuth';
 import GameWaitingPageCreator from './pages/GameWaitingPageCreator';
 import GamePage from './pages/GamePage';
 let clientId = null;
-const ws = new WebSocket("wss://AcronymForMe-api.onrender.com")
+const ws = new WebSocket("wss://acronymforme-api.onrender.com")
 
 
 function App() {
