@@ -8,7 +8,7 @@ import useAuth from './hooks/useAuth';
 import GameWaitingPageCreator from './pages/GameWaitingPageCreator';
 import GamePage from './pages/GamePage';
 let clientId = null;
-const ws = new WebSocket("wss://AcronymForMe-api.onrender.com:9090")
+const ws = new WebSocket("wss://AcronymForMe-api.onrender.com")
 
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
   ws.onmessage = message =>{
     const response = JSON.parse(message.data);
     if(response.method === "connect"){
+      console.log("connected")
       clientId = response.clientID;
       setAuth([clientId]);
     }
