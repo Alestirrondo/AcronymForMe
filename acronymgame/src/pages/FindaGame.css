@@ -1,0 +1,218 @@
+.FindaGame {
+    text-align: center;
+    background-image: linear-gradient(#161b24, grey);
+    
+    
+  }
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    vertical-align: text-top;
+    height : 700px;
+
+}
+
+.findrandomgame{
+    border: 2px solid #8d8d8d;
+    border-radius: 25px;
+    width: 600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: 1%;
+    font-family: cuckoo;
+    font-size: 35px;
+    display: inline-block;
+    padding-top: 2.5%;
+}
+
+.space{
+    margin-top: 10px;
+}
+
+.textbox{
+    position:relative;
+    font-size: 1em;
+    background: linear-gradient(21deg, #303030, grey);
+    padding: 3px;
+    margin-top: 5%;
+    display: inline-block;
+    border-radius: 9999em;
+    *:not(span) {
+        position: relative;
+        display: inherit;
+        border-radius: 50%;
+        margin: 0;
+        border: none;
+        outline: none;
+        padding: 0 .325em;
+        z-index: 1;
+        &:focus + span {
+        opacity: 1;
+        transform: scale(1);
+        }
+    }
+
+    
+}
+.textbox2{
+  position:relative;
+  font-size: 1em;
+  background: linear-gradient(21deg, #303030, grey);
+  padding: 3px;
+  margin-top: 1%;
+  display: inline-block;
+  border-radius: 9999em;
+  *:not(span) {
+      position: relative;
+      display: inherit;
+      border-radius: 50%;
+      margin: 0;
+      border: none;
+      outline: none;
+      padding: 0 .325em;
+      z-index: 1;
+      &:focus + span {
+      opacity: 1;
+      transform: scale(1);
+      }
+  }
+
+  
+}
+
+
+/* CSS */
+.button-84 {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(#464d55, #25292e);
+  border-radius: 8px;
+  border-width: 1;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  font-family: expo-brand-demi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 18px;
+  height: 52px;
+  width: 23%;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  margin-top: 5%;
+  margin-bottom: 40%;
+  outline: none;
+  overflow: hidden;
+  padding: 0 32px;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 150ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-84:hover {
+  box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+  opacity: .85;
+}
+
+.button-84:active {
+  outline: 0;
+}
+
+.button-84:focus {
+  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+@media (max-width: 420px) {
+  .button-84 {
+    height: 48px;
+  }
+}
+
+
+.entergamecode{
+    border: 2px solid #8d8d8d;
+    border-radius: 25px;
+    width: 600px;
+    height: 600px;
+    margin-right: auto;
+    padding-top: 2.5%;
+    font-family: cuckoo;
+    font-size:  35px;
+    display: inline-block;
+}
+.createagame{
+    position: relative;
+    width: 98%;
+    height: 250px;
+    margin-top: 2%;
+    margin-right: 1%;
+    margin-left: 1%;
+    border: 2px solid #8d8d8d;
+    border-radius: 25px;
+    font-family: cuckoo;
+    font-size:  35px;
+}
+
+.button-2 {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(#464d55, #25292e);
+  border-radius: 8px;
+  border-width: 1;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  font-family: expo-brand-demi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 18px;
+  height: 52px;
+  width: 10%;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  margin-top: 1%;
+  margin-bottom: 40%;
+  outline: none;
+  overflow: hidden;
+  padding: 0 32px;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 150ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-2:hover {
+  box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+  opacity: .85;
+}
+
+.button-2:active {
+  outline: 0;
+}
+
+.button-2:focus {
+  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+@media (max-width: 420px) {
+  .button-2 {
+    height: 48px;
+  }
+}

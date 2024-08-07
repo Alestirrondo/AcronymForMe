@@ -1,0 +1,231 @@
+.App {
+  text-align: center;
+  background-image: linear-gradient(#161b24, grey);
+  min-height: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  position: fixed;
+  overflow-x: hidden;
+  
+
+}
+
+.App-button {
+  height: fit-content;
+  width: fit-content;
+  margin-top: 200px;
+  background-color: #7d7a85;
+  border-radius: 8px;
+  opacity: 0.6;
+  display: inline; 
+  font-size: calc(20px + 2vmin);
+  font-family: cuckoo;
+}
+.App-button:hover {opacity: 1;}
+
+.App-logo {
+  margin-top:200px;
+  height: 30vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 5s linear;
+  }
+}
+
+.App-header {
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(50px + 2vmin);
+  font-family: cuckoo;
+  color: white;
+  margin-top:0;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@font-face{
+  font-family: cuckoo;
+  src: url(Font/cuckoo.ttf)
+}
+
+.usercode{
+  font-family: cuckoo;
+  font-size: calc(15px + 2vmin);
+  margin: 0 auto;
+  
+}
+
+.waitingList{
+  font-family: cuckoo;
+  font-size: calc(10px + 2vmin);
+  margin: 0 auto;
+  list-style-type: none;
+}
+
+.playercontainer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+}
+
+.namelist{
+  position: relative;
+  font-family: cuckoo;
+  list-style-type: none;
+  font-size: calc(2px + 2vmin);
+  margin: 0 auto;
+  margin-inline: 3.25%;
+    width: 10%;
+    height:10%
+  
+}
+
+.list{
+  display: flex;
+  flex-direction: row;
+  text-align:center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.answerlist{
+  display: flex;
+  flex-direction: row;
+  text-align:center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-right: 10%;
+}
+
+.answerslist{
+  position: relative;
+  font-family: cuckoo;
+  list-style-type: none;
+  font-size: calc(2px + 2vmin);
+  margin: 0 auto;
+  margin-inline: 3.25%;
+  width: 50%;
+  height:10%
+}
+
+.playerimg{
+    position: relative;
+    bottom: 0;
+    margin: 0 auto;
+    margin-inline: 3.25%;
+    width: 10%;
+    height:10%
+}
+
+.instructions{
+  font-family: cuckoo;
+  font-size: calc(10px + 2vmin);
+  margin-top: 5%;
+}
+.timer{
+  font-family: cuckoo;
+  font-size: calc(10px + 2vmin);
+  margin-top: 10%;
+}
+.displaycontainer{
+  z-index: 10;
+  margin: 0 auto;
+  position: fixed;
+  width: 60%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+}
+
+.acronymButton{
+  height: fit-content;
+  width: fit-content;
+  background-color: #7d7a85;
+  border-radius: 8px;
+  opacity: 0.6;
+  display: inline; 
+  font-size: calc(20px + 2vmin);
+  font-family: cuckoo;
+  margin-right: 5px;
+}
+.acronymButton:hover {opacity: 1;}
+
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.acronymButton2{
+  height: fit-content;
+  width: fit-content;
+  background-color: #7d7a85;
+  border-radius: 8px;
+  opacity: 0.6;
+  display: inline; 
+  font-size: calc(20px + 2vmin);
+  font-family: cuckoo;
+  margin-right: 10px;
+  animation: fadeIn 5s;
+}
+.acronymButton2:hover {opacity: 1;}
+
+.submitButton{
+  height: fit-content;
+  width: fit-content;
+  background-color: #7d7a85;
+  border-radius: 8px;
+  opacity: 0.6;
+  display: inline; 
+  font-size: calc(20px + 2vmin);
+  font-family: cuckoo;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.submitButton:hover {opacity: 1;}
+
+.gameTextbox{
+  position:relative;
+    font-size: 1em;
+    background: linear-gradient(21deg, #303030, grey);
+    padding: 10px;
+    width: 70%;
+    margin-top: 1%;
+    display: inline-block;
+    border-radius: 9999em;
+    text-align: left;
+    font-size: calc(2px + 2vmin);
+    *:not(span) {
+        position: relative;
+        display: inherit;
+        border-radius: 50%;
+        margin: 0;
+        border: none;
+        outline: none;
+        padding: 0 .325em;
+        z-index: 1;
+        &:focus + span {
+        opacity: 1;
+        transform: scale(1);
+        }
+    }
+}
