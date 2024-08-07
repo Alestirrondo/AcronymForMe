@@ -2,7 +2,7 @@ import logo from './4me.png';
 import { useNavigate } from 'react-router-dom';
 import react, {useEffect, useState, useRef } from 'react';
 import useAuth from '../hooks/useAuth';
-const ws = new WebSocket("ws://localhost:9090")
+const ws = new WebSocket("ws://AcronymForMe-api.onrender.com")
 
 
 const GameWaitingPageCreator = ({location}) => {
