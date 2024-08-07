@@ -2,7 +2,7 @@ import logo from './4me.png';
 import { useNavigate } from 'react-router-dom';
 import react, {useEffect, useState } from 'react';
 import useAuth from '../hooks/useAuth';
-let ws = new WebSocket("ws://AcronymForMe-api.onrender.com")
+let ws = new WebSocket("wss://AcronymForMe-api.onrender.com")
 let x = 1;
 
 const GameWaitingPageJoin = ({location}) => {
