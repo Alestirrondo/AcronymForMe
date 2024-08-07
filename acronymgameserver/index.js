@@ -4,7 +4,7 @@ app.get("/", (req,res)=> res.sendFile(__dirname + "/index.js"))
 app.listen(9091, () => console.log("Listening on http port 9091"))
 const websocketServer = require("websocket").server;
 const httpServer = http.createServer();
-httpServer.listen("https://acronymforme.onrender.com/");
+httpServer.listen(9090, () => console.log("Listening.. on 9090"));
 
 const clients = {};
 const games = {};
