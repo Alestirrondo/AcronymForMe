@@ -14,7 +14,7 @@ import PurpleT from '../Images/PurplePersonTurn.png';
 import { useNavigate } from 'react-router-dom';
 import react, {useEffect, useState, useRef} from 'react';
 import useAuth from '../hooks/useAuth';
-const ws = new WebSocket("wss://AcronymForMe-api.onrender.com:9090")
+const ws = new WebSocket("wss://AcronymForMe-api.onrender.com")
 
 let shuffledID = []
 let wordlist = [];

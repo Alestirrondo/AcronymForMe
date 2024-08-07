@@ -3,7 +3,7 @@ import './FindaGame.css';
 import { useNavigate } from 'react-router-dom';
 import React, {useEffect, useState} from 'react';
 import useAuth from '../hooks/useAuth';
-const ws = new WebSocket("wss://AcronymForMe-api.onrender.com:9090")
+const ws = new WebSocket("wss://AcronymForMe-api.onrender.com")
 
 const FindaGame = ({location}) => {
   const navigate = useNavigate();
