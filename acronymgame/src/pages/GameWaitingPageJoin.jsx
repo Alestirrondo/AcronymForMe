@@ -21,7 +21,9 @@ const GameWaitingPageJoin = ({location}) => {
         ws.send(JSON.stringify(payLoad))
     };
 
-    window.addEventListener("popstate", restartwindow())
+    if(location.pathname === '/GamePage'){
+        window.addEventListener("popstate", restartwindow())
+      }
     function restartwindow(){
         window.location.reload();
     }
