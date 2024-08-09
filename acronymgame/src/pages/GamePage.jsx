@@ -72,7 +72,7 @@ const GamePage = ({location}) => {
   }
   
   function restartwindow(){
-    window.location.reload();
+    //window.location.reload();
   }
 
   useEffect(() => {
