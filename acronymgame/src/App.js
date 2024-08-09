@@ -26,14 +26,15 @@ function App() {
       const game = response.game;
       setAuth([clientId, response.game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability, location.pathname])
     }
-    const payLoad = {
-      "method": "count",
-      "gameId": response.game.id
-    }
-    ws.send(JSON.stringify(payLoad))
+    
     if(response.method === "RandomServer"){
       const game = response.game;
       const duty = response.duty
+      const payLoad = {
+        "method": "count",
+        "gameId": response.game.id
+      }
+      ws.send(JSON.stringify(payLoad))
       if(duty === "Parent"){
         navigate('/GameWaitingPageCreator')
       }else{
