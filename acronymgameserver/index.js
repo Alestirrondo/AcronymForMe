@@ -117,8 +117,6 @@ wsServer.on("request", request => {
         }
       }
       
-
-      
     }
     
     console.log("closed")
@@ -542,6 +540,86 @@ wsServer.on("request", request => {
         Game.clients.forEach(c=>{
           clients[c.clientId].connection.send(JSON.stringify(payLoad));
         })
+      }
+
+      if(result.method === "leave"){
+        let turn = false, countready = 0;
+        let gameid = result.GameID;
+        let clientID = result.clientId;
+        if(games[gameid] != null){
+          let turnchange = games[gameid].clients.findIndex(x => x.clientId === clientID) - 1
+          if(turnchange >= 0 && turn){
+            games[gameid].clients[turnchange].turn = true
+          }
+          
+          games[gameid].clients.splice(turnchange + 1,1)
+          
+          if(games[gameid].clients[0] != null){
+            if(turnchange<0 && turn){
+              games[gameid].clients[games[gameid].clients.length - 1].turn = true
+            }
+            if(games[gameid].clients[0].duty === "Child"){
+              games[gameid].clients[0].duty = "Parent"
+  
+            }
+  
+            const Game = games[gameid]
+            if(turn){
+              const payLoad = {
+                "method": "delete",
+                "game" : Game,
+                "roundchange" : true
+              }
+              Game.clients.forEach(c=>{
+                clients[c.clientId].connection.send(JSON.stringify(payLoad));
+                
+              })
+            }else{
+              console.log(countready + " " + Game.clients.length)
+              if(Game.stage == 2 && (countready === Game.clients.length-1)){
+                const payLoad = {
+                  "method": "delete",
+                  "game" : Game,
+                  "stage3" : true,
+                  "client" : clientId
+                }
+                Game.clients.forEach(c=>{
+                  clients[c.clientId].connection.send(JSON.stringify(payLoad));
+                  
+                })
+              }else{
+                const payLoad = {
+                  "method": "delete",
+                  "game" : Game,
+                  "roundchange" : false
+                }
+                Game.clients.forEach(c=>{
+                  clients[c.clientId].connection.send(JSON.stringify(payLoad));
+                  
+                })
+              }
+              
+              
+            }
+            
+    
+            
+          }
+          if(games[gameid].clients.length == 0 || (games[gameid].state === "Running" && games[gameid].clients.length <= 2) ){
+            const Game = games[gameid]
+            const payLoad = {
+              "method": "serverClosed",
+              "game" : Game
+            }
+            
+    
+            Game.clients.forEach(c=>{
+              clients[c.clientId].connection.send(JSON.stringify(payLoad));
+            })
+            games[gameid].clients.length = 0;
+            delete games[gameid]
+          }
+        }
       }
     }
     

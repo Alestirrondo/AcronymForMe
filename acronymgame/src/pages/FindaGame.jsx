@@ -24,7 +24,21 @@ const FindaGame = ({location}) => {
       [name]: value,
     });
   };
+  useEffect(() =>{
+    if(!auth[1]){
+      const payLoad = {
+        "method": "leave",
+        "clientId" : auth[0],
+        "GameID" : auth[1]
+      }
+      ws.send(JSON.stringify(payLoad))
+    }
+    
+  })
 
+  function dropuser(){
+
+  }
   const randomLobby = () => {
     if(user.nameR != '' && user.nameR.length < 15){
       const payLoad = {
