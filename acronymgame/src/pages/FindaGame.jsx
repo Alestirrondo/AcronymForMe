@@ -35,11 +35,8 @@ const FindaGame = ({location}) => {
       
     }
     
-  },[auth])
+  },[])
 
-  function dropuser(){
-
-  }
   const randomLobby = () => {
     if(user.nameR != '' && user.nameR.length < 15){
       const payLoad = {

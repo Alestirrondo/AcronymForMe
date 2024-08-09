@@ -26,7 +26,11 @@ function App() {
       const game = response.game;
       setAuth([clientId, response.game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability, location.pathname])
     }
-
+    const payLoad = {
+      "method": "count",
+      "gameId": auth[1]
+    }
+    ws.send(JSON.stringify(payLoad))
     if(response.method === "RandomServer"){
       const game = response.game;
       const duty = response.duty

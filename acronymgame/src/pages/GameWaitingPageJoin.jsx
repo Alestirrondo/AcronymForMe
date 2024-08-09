@@ -26,12 +26,6 @@ const GameWaitingPageJoin = ({location}) => {
           if(location.pathname === '/GameWaitingPageJoin'){
             if(auth[8] === '/GamePage'){
               window.location.reload();
-            }else{
-                const payLoad = {
-                    "method": "count",
-                    "gameId": auth[1]
-                }
-                ws.send(JSON.stringify(payLoad))
             }
           }
           
