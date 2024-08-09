@@ -7,11 +7,14 @@
 
 .container{
   margin: 0 auto;
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: row;
     vertical-align: text-top;
     height : 700px;
+    width: 60%;
+    left: 50%;
+    transform: translate(-50%, 0);
 
 }
 
