@@ -27,6 +27,7 @@ const FindaGame = ({location}) => {
   useEffect(() =>{
     if(!auth[1]){
       if(location.pathname === '/FindaGame'){
+        console.log("it ran")
         const payLoad = {
           "method": "leave",
           "clientId" : auth[0],
