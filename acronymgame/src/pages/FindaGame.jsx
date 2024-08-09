@@ -35,7 +35,7 @@ const FindaGame = ({location}) => {
       
     }
     
-  },[])
+  },[auth])
 
   const randomLobby = () => {
     if(user.nameR != '' && user.nameR.length < 15){
