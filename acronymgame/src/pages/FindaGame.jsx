@@ -26,12 +26,15 @@ const FindaGame = ({location}) => {
   };
   useEffect(() =>{
     if(!auth[1]){
-      const payLoad = {
-        "method": "leave",
-        "clientId" : auth[0],
-        "GameID" : auth[1]
+      if(location.pathname === '/FindaGame'){
+        const payLoad = {
+          "method": "leave",
+          "clientId" : auth[0],
+          "GameID" : auth[1]
+        }
+        ws.send(JSON.stringify(payLoad))
       }
-      ws.send(JSON.stringify(payLoad))
+      
     }
     
   })
