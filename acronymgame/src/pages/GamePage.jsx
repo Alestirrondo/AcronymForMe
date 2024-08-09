@@ -68,7 +68,6 @@ const GamePage = ({location}) => {
     });
   };
 
-
   useEffect(() => {
     if(auth[1] == null){
       navigate('/');
