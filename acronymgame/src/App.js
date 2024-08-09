@@ -86,7 +86,7 @@ function App() {
         serverlist.push(c.clientName);
       })
 
-      setAuth([clientId, game.id, serverlist, game.acronym, game.stage, game.roundWinner, response.method, game.availability, location.pathname]);
+      setAuth([clientId, game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability, location.pathname]);
       
     }
 
