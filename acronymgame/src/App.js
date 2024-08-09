@@ -165,7 +165,7 @@ function App() {
     }
     if(response.method === "round"){
       const game = response.game
-      setAuth([clientId,game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability, location.pathname)
+      setAuth([clientId,game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability, location.pathname])
       setAuth([clientId,game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability, location.pathname])
     }
 
