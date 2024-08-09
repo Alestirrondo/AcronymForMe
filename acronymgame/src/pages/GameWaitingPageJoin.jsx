@@ -21,17 +21,6 @@ const GameWaitingPageJoin = ({location}) => {
         ws.send(JSON.stringify(payLoad))
     };
 
-    useEffect(() =>{
-        if(typeof auth[1] !== 'undefined'){
-          if(location.pathname === '/GameWaitingPageJoin'){
-            if(auth[8] === '/GamePage'){
-              window.location.reload();
-            }
-          }
-          
-        }
-        
-      },[auth])
 
     useEffect(() => {
         if(location.pathname === '/GameWaitingPageJoin'){

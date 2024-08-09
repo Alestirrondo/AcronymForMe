@@ -1,6 +1,6 @@
 import './App.css';
-import React, { useState, useCallback } from 'react';
-import { useNavigate, useLocation, Route, Link, NavLink } from 'react-router-dom';
+import React, { useState, useCallback, Component } from 'react';
+import { useNavigate, useLocation, Route, Link, NavLink, withRouter } from 'react-router-dom';
 import HomePage from "./pages/HomePage";
 import FindaGame from "./pages/FindaGame";
 import GameWaitingPageJoin from "./pages/GameWaitingPageJoin";
@@ -10,8 +10,11 @@ import GamePage from './pages/GamePage';
 let clientId = null;
 const ws = new WebSocket("wss://AcronymForMe-api.onrender.com")
 
-
-function App() {
+function App(){
+  window.addEventListener("popstate", restartwindow())
+  function restartwindow(){
+    window.location.reload();
+  }
   const {setAuth} = useAuth();
   ws.onmessage = message =>{
     const response = JSON.parse(message.data);
@@ -30,11 +33,7 @@ function App() {
     if(response.method === "RandomServer"){
       const game = response.game;
       const duty = response.duty
-      const payLoad = {
-        "method": "count",
-        "gameId": response.game.id
-      }
-      ws.send(JSON.stringify(payLoad))
+
       if(duty === "Parent"){
         navigate('/GameWaitingPageCreator')
       }else{

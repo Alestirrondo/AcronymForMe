@@ -24,18 +24,6 @@ const FindaGame = ({location}) => {
       [name]: value,
     });
   };
-  useEffect(() =>{
-    if(typeof auth[1] !== 'undefined'){
-      if(location.pathname === '/FindaGame'){
-        console.log(auth[8])
-        if(auth[8] === '/GamePage' || auth[8] === '/GameWaitingPageCreator' || auth[8] === '/GameWaitingPageJoin'){
-          window.location.reload();
-        }
-      }
-      
-    }
-    
-  },[auth])
 
   const randomLobby = () => {
     if(user.nameR != '' && user.nameR.length < 15){

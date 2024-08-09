@@ -21,17 +21,6 @@ const GameWaitingPageCreator = ({location}) => {
         }
         ws.send(JSON.stringify(payLoad))
     };
-    useEffect(() =>{
-        if(typeof auth[1] !== 'undefined'){
-          if(location.pathname === '/GameWaitingPageCreator'){
-            if(auth[8] === '/GamePage'){
-              window.location.reload();
-            }
-          }
-          
-        }
-        
-      },[auth])
     
     useEffect(() => {
         if(location.pathname === '/GameWaitingPageCreator'){
@@ -46,7 +35,11 @@ const GameWaitingPageCreator = ({location}) => {
                 if((auth[2].length >= 3 && auth[7] === 'Public') || auth[2].length == 6){
                     Countdown()
                     setClock(true)
-                }  
+                }else{
+                    clearInterval(timerId1.current)
+                    setClock(false)
+                    setTime(30)
+                }
             }
         }
     },[auth])
