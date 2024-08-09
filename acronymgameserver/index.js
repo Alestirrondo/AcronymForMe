@@ -543,6 +543,7 @@ wsServer.on("request", request => {
       }
 
       if(result.method === "leave"){
+        console.log("it ran")
         let turn = false, countready = 0;
         let gameid = result.GameID;
         let clientID = result.clientId;
