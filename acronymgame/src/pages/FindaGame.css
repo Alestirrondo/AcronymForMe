@@ -150,7 +150,7 @@
 .entergamecode{
     width: 60%;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(+50%, 0);
     display: inline-block;
     margin: 0 auto;
     position: absolute;
