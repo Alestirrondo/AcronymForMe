@@ -6,14 +6,12 @@
   }
 
 .container{
-    margin: 0 auto;
-    position: fixed;
+    position: relative;
     display: flex;
     flex-direction: row;
     vertical-align: text-top;
     height : 700px;
     width: auto;
-    transform: translate(-50%, 0);
 
 }
 
