@@ -7,7 +7,7 @@
 
 .container{
   margin: 0 auto;
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: row;
     vertical-align: text-top;
