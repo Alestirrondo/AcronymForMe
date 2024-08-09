@@ -28,7 +28,7 @@ function App() {
     }
     const payLoad = {
       "method": "count",
-      "gameId": auth[1]
+      "gameId": response.game.id
     }
     ws.send(JSON.stringify(payLoad))
     if(response.method === "RandomServer"){
