@@ -22,7 +22,6 @@ const GameWaitingPageCreator = ({location}) => {
         ws.send(JSON.stringify(payLoad))
     };
     useEffect(() =>{
-        console.log(typeof auth[1])
         if(typeof auth[1] !== 'undefined'){
           if(location.pathname === '/GameWaitingPageCreator'){
             if(auth[8] === '/GamePage'){

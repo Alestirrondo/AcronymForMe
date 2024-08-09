@@ -22,7 +22,6 @@ const GameWaitingPageJoin = ({location}) => {
     };
 
     useEffect(() =>{
-        console.log(typeof auth[1])
         if(typeof auth[1] !== 'undefined'){
           if(location.pathname === '/GameWaitingPageJoin'){
             if(auth[8] === '/GamePage'){

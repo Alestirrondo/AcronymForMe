@@ -25,9 +25,9 @@ const FindaGame = ({location}) => {
     });
   };
   useEffect(() =>{
-    console.log(typeof auth[1])
     if(typeof auth[1] !== 'undefined'){
       if(location.pathname === '/FindaGame'){
+        console.log(auth[8])
         if(auth[8] === '/GamePage' || auth[8] === '/GameWaitingPageCreator' || auth[8] === '/GameWaitingPageJoin'){
           window.location.reload();
         }
