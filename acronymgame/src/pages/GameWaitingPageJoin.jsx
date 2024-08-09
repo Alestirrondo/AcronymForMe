@@ -37,7 +37,7 @@ const GameWaitingPageJoin = ({location}) => {
           
         }
         
-      })
+      },[auth])
 
     useEffect(() => {
         if(location.pathname === '/GameWaitingPageJoin'){

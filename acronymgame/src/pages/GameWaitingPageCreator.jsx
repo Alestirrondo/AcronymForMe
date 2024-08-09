@@ -37,7 +37,7 @@ const GameWaitingPageCreator = ({location}) => {
           
         }
         
-      },[])
+      },[auth])
     
     useEffect(() => {
         if(location.pathname === '/GameWaitingPageCreator'){

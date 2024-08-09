@@ -35,7 +35,7 @@ const FindaGame = ({location}) => {
       
     }
     
-  })
+  },[auth])
 
   function dropuser(){
 
