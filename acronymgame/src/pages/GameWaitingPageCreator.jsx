@@ -26,6 +26,12 @@ const GameWaitingPageCreator = ({location}) => {
           if(location.pathname === '/GameWaitingPageCreator'){
             if(auth[8] === '/GamePage'){
               window.location.reload();
+            }else{
+                const payLoad = {
+                    "method": "count",
+                    "gameId": auth[1]
+                }
+                ws.send(JSON.stringify(payLoad))
             }
           }
           

@@ -58,13 +58,14 @@ const FindaGame = ({location}) => {
 
   const CreateLobby = () => {
     if(user.nameC != '' && user.nameC.length < 15){
+      navigate('/GameWaitingPageCreator')
       const payLoad = {
         "method": "create",
         "clientId" : auth[0],
         "clientName" : user.nameC
       }
       ws.send(JSON.stringify(payLoad))
-      navigate('/GameWaitingPageCreator')
+      
     }else{
       if(user.nameC == '')
         alert("Fill in user name!");

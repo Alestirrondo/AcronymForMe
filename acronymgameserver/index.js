@@ -386,6 +386,9 @@ wsServer.on("request", request => {
           "method": "count",
           "game": Game
         }
+        Game.clients.forEach(c=>{
+          clients[c.clientId].connection.send(JSON.stringify(payLoad));
+        })
         
       }
   
