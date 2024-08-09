@@ -19,8 +19,7 @@
 }
 
 .findrandomgame{
-    width: 60%;
-    left: 50%;
+    width: 40%;
     transform: translate(-50%, 0);
     display: inline-block;
     margin: 0 auto;
@@ -150,7 +149,7 @@
 
 
 .entergamecode{
-    width: 60%;
+    width: 40%;
     left: 50%;
     transform: translate(+50%, 0);
     display: inline-block;
