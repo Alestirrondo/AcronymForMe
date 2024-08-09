@@ -12,13 +12,14 @@
     flex-direction: row;
     vertical-align: text-top;
     height : 700px;
-    width: 60%;
-    left: 50%;
-    transform: translate(-50%, 0);
+    
 
 }
 
 .findrandomgame{
+    width: 60%;
+    left: 50%;
+    transform: translate(-50%, 0);
     display: inline-block;
     margin: 0 auto;
     position: absolute;
@@ -147,12 +148,14 @@
 
 
 .entergamecode{
+    width: 60%;
+    left: 50%;
+    transform: translate(-50%, 0);
     display: inline-block;
     margin: 0 auto;
     position: absolute;
     border: 2px solid #8d8d8d;
     border-radius: 25px;
-    width: 600px;
     height: 600px;
     margin-right: auto;
     padding-top: 2.5%;
