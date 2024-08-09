@@ -21,7 +21,10 @@ const GameWaitingPageJoin = ({location}) => {
         ws.send(JSON.stringify(payLoad))
     };
 
-
+    window.addEventListener("popstate", restartwindow())
+    function restartwindow(){
+        window.location.reload();
+    }
     useEffect(() => {
         if(location.pathname === '/GameWaitingPageJoin'){
             if(auth[1] == null){

@@ -67,7 +67,10 @@ const GamePage = ({location}) => {
       [name]: value,
     });
   };
-
+  window.addEventListener("popstate", restartwindow())
+  function restartwindow(){
+    window.location.reload();
+  }
 
   useEffect(() => {
     if(auth[1] == null){

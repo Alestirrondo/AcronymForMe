@@ -11,10 +11,7 @@ let clientId = null;
 const ws = new WebSocket("wss://AcronymForMe-api.onrender.com")
 
 function App(){
-  window.addEventListener("popstate", restartwindow())
-  function restartwindow(){
-    window.location.reload();
-  }
+  
   const {setAuth} = useAuth();
   ws.onmessage = message =>{
     const response = JSON.parse(message.data);
