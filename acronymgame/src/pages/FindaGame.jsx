@@ -25,7 +25,7 @@ const FindaGame = ({location}) => {
     });
   };
   useEffect(() =>{
-    if(!auth[1]){
+    if(typeof auth[1] !== 'undefined'){
       if(location.pathname === '/FindaGame'){
         console.log("it ran")
         const payLoad = {
