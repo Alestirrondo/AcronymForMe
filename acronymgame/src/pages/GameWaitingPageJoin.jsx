@@ -21,6 +21,19 @@ const GameWaitingPageJoin = ({location}) => {
         ws.send(JSON.stringify(payLoad))
     };
 
+    useEffect(() =>{
+        console.log(typeof auth[1])
+        if(typeof auth[1] !== 'undefined'){
+          if(location.pathname === '/GameWaitingPageJoin'){
+            if(auth[8] === '/GamePage'){
+              window.location.reload();
+            }
+          }
+          
+        }
+        
+      })
+
     useEffect(() => {
         if(location.pathname === '/GameWaitingPageJoin'){
             if(auth[1] == null){

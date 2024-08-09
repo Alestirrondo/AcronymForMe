@@ -28,13 +28,9 @@ const FindaGame = ({location}) => {
     console.log(typeof auth[1])
     if(typeof auth[1] !== 'undefined'){
       if(location.pathname === '/FindaGame'){
-        console.log("it ran")
-        const payLoad = {
-          "method": "leave",
-          "clientId" : auth[0],
-          "GameID" : auth[1]
+        if(auth[8] === '/GamePage' || auth[8] === '/GameWaitingPageCreator' || auth[8] === '/GameWaitingPageJoin'){
+          window.location.reload();
         }
-        ws.send(JSON.stringify(payLoad))
       }
       
     }

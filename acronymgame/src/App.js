@@ -24,7 +24,7 @@ function App() {
 
     if(response.method === "create"){
       const game = response.game;
-      setAuth([clientId, response.game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability])
+      setAuth([clientId, response.game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability, location.pathname])
     }
 
     if(response.method === "RandomServer"){
@@ -44,7 +44,7 @@ function App() {
           
         }
       }
-      setAuth([clientId, response.game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability])
+      setAuth([clientId, response.game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability, location.pathname])
     }
 
     if(response.method === "join"){
@@ -66,7 +66,7 @@ function App() {
             navigate('/GamePage')
           }
         }
-        setAuth([clientId, response.game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability])
+        setAuth([clientId, response.game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability, location.pathname])
       }else{
         alert("That game server code does not work");
       }
@@ -81,14 +81,14 @@ function App() {
         serverlist.push(c.clientName);
       })
 
-      setAuth([clientId, game.id, serverlist, game.acronym, game.stage, game.roundWinner, response.method, game.availability]);
+      setAuth([clientId, game.id, serverlist, game.acronym, game.stage, game.roundWinner, response.method, game.availability, location.pathname]);
       
     }
 
     if(response.method === "start"){
       const game = response.game;
       navigate('/GamePage')
-      setAuth([clientId,game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability])
+      setAuth([clientId,game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability, location.pathname])
       
     }
 
@@ -110,7 +110,7 @@ function App() {
           }
           
         }
-        setAuth([clientId,game.id,game.clients,game.acronym, game.stage, game.roundWinner, response.roundchange, game.availability])
+        setAuth([clientId,game.id,game.clients,game.acronym, game.stage, game.roundWinner, response.roundchange, game.availability, location.pathname])
       }else{
         
         if(response.stage3){
@@ -121,7 +121,7 @@ function App() {
             }
           })
           if(turn === true){
-            setAuth([clientId,game.id,game.clients,game.acronym, game.stage, game.roundWinner, "ping", game.availability])
+            setAuth([clientId,game.id,game.clients,game.acronym, game.stage, game.roundWinner, "ping", game.availability, location.pathname])
           }
         }else{
           game.clients.forEach(c =>{
@@ -137,7 +137,7 @@ function App() {
             }
             
           }
-          setAuth([clientId,game.id,game.clients,game.acronym, game.stage, game.roundWinner, response.method, game.availability])
+          setAuth([clientId,game.id,game.clients,game.acronym, game.stage, game.roundWinner, response.method, game.availability, location.pathname])
         }
         
       }
@@ -152,33 +152,33 @@ function App() {
 
     if(response.method === "select"){
       const game = response.game
-      setAuth([clientId,game.id,game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability])
+      setAuth([clientId,game.id,game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability, location.pathname])
     }
 
     if(response.method === "submit"){
       const game = response.game
-      setAuth([clientId,game.id,game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability])
+      setAuth([clientId,game.id,game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability, location.pathname])
     }
     if(response.method === "point"){
       const game = response.game
-      setAuth([clientId,game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability])
+      setAuth([clientId,game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability, location.pathname])
     }
     if(response.method === "round"){
       const game = response.game
-      setAuth([clientId,game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability])
-      setAuth([clientId,game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability])
+      setAuth([clientId,game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability, location.pathname)
+      setAuth([clientId,game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability, location.pathname])
     }
 
     if(response.method === "reset"){
       const game = response.game
-      setAuth([clientId,game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability])
+      setAuth([clientId,game.id, game.clients, game.acronym, game.stage, game.roundWinner, response.method, game.availability, location.pathname])
     }
 
     if(response.method === "serverClosed"){
       window.location.reload();
       alert("The server has closed due to lack of players")
 
-      setAuth([clientId, null, null, null, null, null])
+      setAuth([clientId, null, null, null, null, null, null])
     }
   }
   
